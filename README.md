@@ -105,3 +105,7 @@ Build xuất STL, ảnh, log OpenSCAD và `exports/audit.json`. Audit kiểm tra
 ## Autodesk Fusion V4
 
 Bộ [script Fusion native parametric V4](fusion/README.md) dựng 4 góc, 4 khóa và 4 chốt; xem tài liệu về tham số, cách chạy và giới hạn kiểm chứng.
+
+## Bộ tài liệu agent tự học.
+
+[Cẩm nang dùng chung](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/agent-learning.md) tổng hợp quy trình SCAD trước rồi Fusion Python sau. [Sổ lỗi và cách sửa](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/error-cookbook.md) ghi các ca kỹ thuật cùng phạm vi kiểm chứng. [Mẫu giao việc](https://github.com/TimTini/snaplock-storage-box/blob/main/docs/scad-to-fusion-task.md) áp dụng quy trình cho model mới.
