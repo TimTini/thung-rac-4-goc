@@ -1,0 +1,25 @@
+# Local workspace and private data
+/work/
+/backup/
+/backups/
+**/.vscode/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Generated logs; intentional exports remain publishable
+*.log
+*.off
+
+# Generated local cache directories
+cache/

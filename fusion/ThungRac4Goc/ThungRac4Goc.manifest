@@ -1,0 +1,10 @@
+﻿{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "",
+  "description": {"": "Thùng rác bốn góc V4 native parametric; 4 góc, 4 khóa, 4 chốt."},
+  "version": "1.1.0",
+  "runOnStartup": false,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

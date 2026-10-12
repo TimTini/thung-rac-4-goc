@@ -1,0 +1,200 @@
+{
+  "corner.stl": {
+    "watertight": true,
+    "components": 1,
+    "bounds_mm": [
+      [
+        0.0,
+        0.20000000298023224,
+        0.0
+      ],
+      [
+        204.0,
+        184.0,
+        240.0
+      ]
+    ],
+    "size_mm": [
+      204.0,
+      183.79999999701977,
+      240.0
+    ],
+    "volume_mm3": 472626.13400143944,
+    "zero_area_faces_removed": 18
+  },
+  "base.stl": {
+    "watertight": true,
+    "components": 1,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        160.0,
+        160.0,
+        6.0
+      ]
+    ],
+    "size_mm": [
+      160.0,
+      160.0,
+      6.0
+    ],
+    "volume_mm3": 97162.15679703589,
+    "zero_area_faces_removed": 0
+  },
+  "coupon.stl": {
+    "watertight": true,
+    "components": 2,
+    "bounds_mm": [
+      [
+        0.0,
+        2.0,
+        0.0
+      ],
+      [
+        56.0,
+        10.0,
+        30.0
+      ]
+    ],
+    "size_mm": [
+      56.0,
+      8.0,
+      30.0
+    ],
+    "volume_mm3": 12753.192140689445,
+    "zero_area_faces_removed": 8
+  },
+  "assembly.off": {
+    "watertight": true,
+    "components": 1,
+    "bounds_mm": [
+      [
+        -184.0,
+        -184.0,
+        0.0
+      ],
+      [
+        184.0,
+        184.0,
+        240.0
+      ]
+    ],
+    "size_mm": [
+      368.0,
+      368.0,
+      240.0
+    ],
+    "volume_mm3": 1987666.9299962164,
+    "zero_area_faces_removed": 72
+  },
+  "pairwise_intersections": [
+    {
+      "parts": [
+        0,
+        1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        2
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        3
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        2
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        3
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        3
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        4
+      ],
+      "overlap_mm3": 0.0
+    }
+  ],
+  "default_mating_bore_axes_mm": {
+    "tongue": [
+      [
+        -10,
+        171,
+        30
+      ],
+      [
+        -10,
+        185,
+        30
+      ]
+    ],
+    "rotated_receiver": [
+      [
+        -9.99999999999999,
+        171.0,
+        30.0
+      ],
+      [
+        -9.99999999999999,
+        185.0,
+        30.0
+      ]
+    ]
+  },
+  "last_corner_vertical_insertion_clear_at_z_mm": [
+    1,
+    30,
+    120,
+    239,
+    241
+  ],
+  "corner_fits_assumed_256_cube": true
+}
