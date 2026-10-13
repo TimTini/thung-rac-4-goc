@@ -34,7 +34,7 @@ Thử coupon thành bằng `coupon.stl`, `coupon_key.stl` và `pin.stl` như V4/
 Các STL trong **`exports/v6/audit/` chỉ là thể tích quét/hình ngàm đang ép, không in**.
 
 Footprint CAD từng part nằm trong XY 250 mm; thân cần Z 240 mm. Khóa thành 236 mm
-với brim 5 mm chiếm 246 mm. Chưa kiểm tra vùng cấm, skirt/support hoặc G-code.
+với brim 5 mm chiếm 246 mm. Chưa kiểm tra vùng cấm/skirt/support của thân đầy đủ.
 Vai đầu khóa vát 45° và lớp đầu liền mạch. Hốc dưới đáy vẫn có trần bridge:
 nhịp danh nghĩa mặc định khoảng 7,5 mm tại đầu khóa và 11,5 mm tại thanh nối;
 không còn hốc đế rộng 28 ×22,5 mm của bản thử ban đầu. Chọn hướng bridge qua
@@ -103,7 +103,7 @@ giao thể tích ép chốt thành báo riêng. Kiểm tra từng đầu T chặ
 Có probe solid để kiểm tra trần hốc và phần nhựa tì dưới đầu T thực sự tồn tại.
 Audit mesh khóa yêu cầu không có mặt dưới vượt ngưỡng 45° phía trên mặt bàn
 (diện tích 0 mm²), lớp đầu tại Z 0,1 mm liền mạch, nhịp bridge hốc mới danh nghĩa
-không quá 14 mm. Đây là kiểm tra hình học; chưa có toolpath/support/G-code thực tế.
+không quá 14 mm. Đây là kiểm tra hình học; bằng chứng slice offline được tách riêng dưới đây.
 
 Đường đưa khóa lên 15 mm, trượt 8 mm khi giữ ngàm ép, và nhấn ngàm tại vị trí cuối
 được kiểm tra bằng bao thể tích quét bảo thủ, gồm cả trường hợp ba khóa khác đã
@@ -116,9 +116,29 @@ chốt thành có quét liên tục 60..2 mm và lấy mẫu phần ép nêm cu�
 hành trình quá ngắn hoặc pad không giao gân phải bị từ chối. Không chạy audit với
 Python -O/PYTHONOPTIMIZE. File kết quả biến thể nằm trong `work/v6-variants/`.
 
-Chưa có slicer/in thực, tải, lực lắp hoặc kiểm chứng Fusion V6. Xem ảnh
+Chưa có in thực, tải, lực lắp hoặc kiểm chứng Fusion V6. Xem ảnh
 `floor_detail.png` (trên), `underside_detail.png` (dưới), `floor_joint_section.png`
 (mặt cắt qua đầu T) và `floor_joint_exploded.png` (vị trí đưa khóa từ dưới).
+
+## Slice offline — 2026-10-13
+
+Đã chạy Bambu Studio 02.08.02.61 bằng CLI cho coupon và khóa, giữ hướng STL, support
+tắt. Fixture từ profile bundled Prusa MK3S nozzle 0,4 mm, lớp 0,20 mm, Generic PLA,
+bàn 250 ×210 mm; đây không phải profile máy in đã xác nhận của người dùng.
+
+- Cả hai lệnh exit 0, 3MF có G-code và cấu hình `enable_support=0`, metadata
+  `support_used=false`; không có feature/path support trong G-code.
+- Khóa nhỏ không có warning, nhưng vẫn có đường bridge trong toolpath.
+- **Coupon có cảnh báo floating cantilever**. Slice thành công khi tắt support
+  không chứng minh mẫu sẽ in tốt; chưa chốt coupon hoặc cả thùng là không cần support.
+  Cần xem preview và in coupon trước, kiểm tra bridge võng/độ khít, rồi mới quyết
+  định có support cục bộ hoặc phải sửa hình học.
+
+Tóm tắt được kiểm tra độc lập nằm ở `exports/v6/slice-audit.json` (hash artifact,
+hash STL tại lúc kiểm tra, warning và kiểm tra support). Cấu hình fixture, lệnh
+đầy đủ, kết quả thô và 3MF/G-code giữ local tại `work/v6-slice/`; không gửi máy in.
+Các 3MF này là dữ liệu kiểm chứng profile mẫu, không phải file in đã chốt cho máy thật.
+Lệnh CLI đối chiếu [tài liệu chính thức Bambu Studio](https://github.com/bambulab/BambuStudio/wiki/Command-Line-Usage).
 
 ## Tài liệu tham khảo
 

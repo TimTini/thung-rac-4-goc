@@ -1,0 +1,51 @@
+{
+  "tool": "Bambu Studio 02.08.02.61",
+  "date": "2026-10-13",
+  "scope": "offline profile fixture; not user printer validation",
+  "fixture": {
+    "purpose": "offline slicer fixture only; not a user-printer profile or print validation",
+    "sources": [
+      "Prusa/MK3S 0.4 nozzle",
+      "Prusa/0.20mm Standard @MK3S",
+      "Prusa/Generic PLA @Prusa"
+    ],
+    "settings": {
+      "bed_mm": [
+        250,
+        210
+      ],
+      "nozzle_mm": 0.4,
+      "layer_height_mm": 0.2,
+      "filament": "Generic PLA",
+      "enable_support": "0",
+      "orientation": "preserve STL orientation",
+      "arrange": 0
+    }
+  },
+  "physical_print_verified": false,
+  "models": [
+    {
+      "model": "floor_coupon",
+      "support_enabled": false,
+      "support_paths_found": false,
+      "bridge_feature_sections": 13,
+      "positive_E_with_XY_bridge_moves": 1174,
+      "warnings": [
+        "It seems object floor_coupon.stl has floating cantilever. Please re-orient the object or enable support generation."
+      ],
+      "sliced_3mf_sha256": "5587c6da7bc54cb6d573f3ad02d04fd610dd95e51cf32180e3183f86bedf5bc6",
+      "source_stl_sha256_at_verification": "0e539a33f858b978f6a9dbbeb3b797c1300b1f3a0d7408aa4777bc229b519059"
+    },
+    {
+      "model": "floor_key",
+      "support_enabled": false,
+      "support_paths_found": false,
+      "bridge_feature_sections": 4,
+      "positive_E_with_XY_bridge_moves": 154,
+      "warnings": [],
+      "sliced_3mf_sha256": "dcbd38a307aea7497dd1fcded2f1e564f09c7558e6d051a18c8fbcc35929a0c7",
+      "source_stl_sha256_at_verification": "18f716ed9deecc920c9bc4d633e37aa82072d941c1f8a36856878f2bd813c865"
+    }
+  ],
+  "assessment": "Floor key slices without warnings; coupon has floating cantilever warning. Physical bridging/support requirements remain unverified."
+}
