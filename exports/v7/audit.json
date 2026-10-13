@@ -1,0 +1,172 @@
+{
+  "source": "thung-rac-4-goc-v7.scad",
+  "physical_load_test": false,
+  "slicer_verified_by_this_audit": false,
+  "floor_key_overhang_over_45deg_mm2": 0.0,
+  "floor_key": {
+    "size_mm": [
+      21.0,
+      83.0,
+      4.75
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 5906.916774287235
+  },
+  "corner": {
+    "size_mm": [
+      195.79999999701977,
+      195.79999999701977,
+      240.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 670050.5561159294
+  },
+  "floor_pin_overhang_over_45deg_mm2": 0.0,
+  "floor_pin": {
+    "size_mm": [
+      6.0,
+      6.0,
+      4.199999809265137
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 54.650665403763064
+  },
+  "key": {
+    "size_mm": [
+      236.0,
+      12.0,
+      32.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 40316.22829559671
+  },
+  "pin": {
+    "size_mm": [
+      8.0,
+      17.0,
+      4.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 339.8640500440215
+  },
+  "floor_coupon": {
+    "size_mm": [
+      36.0,
+      32.0,
+      12.0
+    ],
+    "components": 2,
+    "watertight": true,
+    "volume_mm3": 5571.491458447787
+  },
+  "floor_coupon_key_overhang_over_45deg_mm2": 0.0,
+  "floor_coupon_key": {
+    "size_mm": [
+      21.0,
+      27.0,
+      4.75
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 1972.225150010021
+  },
+  "part_count": 20,
+  "pair_count": 190,
+  "assembled_bounds_mm": [
+    [
+      -199.0,
+      -199.0,
+      0.0
+    ],
+    [
+      199.0,
+      199.0,
+      244.0
+    ]
+  ],
+  "intentional_pin_interference": [
+    {
+      "pin": 0,
+      "part": 0,
+      "volume_mm3": 0.3320510430203285
+    },
+    {
+      "pin": 0,
+      "part": 1,
+      "volume_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 1,
+      "part": 1,
+      "volume_mm3": 0.3320510430203285
+    },
+    {
+      "pin": 1,
+      "part": 2,
+      "volume_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 2,
+      "part": 2,
+      "volume_mm3": 0.3320510430203285
+    },
+    {
+      "pin": 2,
+      "part": 3,
+      "volume_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 3,
+      "part": 0,
+      "volume_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 3,
+      "part": 3,
+      "volume_mm3": 0.3320510430203285
+    },
+    {
+      "pin": 4,
+      "part": 8,
+      "volume_mm3": 0.052300780688427174
+    },
+    {
+      "pin": 5,
+      "part": 9,
+      "volume_mm3": 0.052300743085747094
+    },
+    {
+      "pin": 6,
+      "part": 10,
+      "volume_mm3": 0.0523007430857542
+    },
+    {
+      "pin": 7,
+      "part": 11,
+      "volume_mm3": 0.052300743085766044
+    }
+  ],
+  "floor_rail_captures_both_panels_xz_1mm": true,
+  "wall_keys_restrain_each_panel_xy_1mm": true,
+  "head_stops_forward_pin_stops_reverse_1mm": true,
+  "continuous_rail_free_approach_mm": [
+    0,
+    83.0
+  ],
+  "continuous_floor_pin_free_approach_mm": [
+    1,
+    15
+  ],
+  "sampled_corner_and_wall_key_paths": true,
+  "continuous_wall_pin_free_approach_mm": [
+    2,
+    60
+  ],
+  "short_coupon_compatible": true,
+  "solid_volume_mm3": 2866672.8636050434
+}

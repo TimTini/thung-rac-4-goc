@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-13",
+  "tool": "Bambu Studio 02.08.02.61",
+  "fixture": "Prusa MK3S 0.4 / Standard 0.20 / Generic PLA; diagnostic fixture, not user printer profile",
+  "orientation": "unchanged from exported STL",
+  "physical_print_verified": false,
+  "full_corner_sliced": false,
+  "models": [
+    {
+      "model": "floor_coupon",
+      "return_code": 0,
+      "raw_warning_message": "",
+      "enable_support": "0",
+      "support_used": false,
+      "support_extrusion_moves": 0,
+      "bridge_sections": 2,
+      "bridge_positive_e_xy_moves": 276,
+      "stl_sha256": "d2c29193f415ef24e26b1980dfa7c58618b4c49cee1820cb405e0edbf5efa860",
+      "sliced_3mf_sha256": "bcb316085949d67cd24b12af68b5e9c3a43661046e84966c9eee9c6664f2d873"
+    },
+    {
+      "model": "floor_coupon_key",
+      "return_code": 0,
+      "raw_warning_message": "",
+      "enable_support": "0",
+      "support_used": false,
+      "support_extrusion_moves": 0,
+      "bridge_sections": 2,
+      "bridge_positive_e_xy_moves": 286,
+      "stl_sha256": "ff49ff719c801e783d00825757a9bcd3268bcf9450fd9d2ddc05750a44b077bb",
+      "sliced_3mf_sha256": "e0393fbf82851837549fd957647dc26f9d1e962886773c6ce493c7112681742c"
+    },
+    {
+      "model": "floor_key",
+      "return_code": 0,
+      "raw_warning_message": "",
+      "enable_support": "0",
+      "support_used": false,
+      "support_extrusion_moves": 0,
+      "bridge_sections": 4,
+      "bridge_positive_e_xy_moves": 719,
+      "stl_sha256": "0ba0fc4d5fa71f9eda9f761f066fd60d5d0db66bed2d50c7692d6529bb3cd11f",
+      "sliced_3mf_sha256": "d21c7dc767e47006d05367dea85157e0feebe8ea94281c89f805a690c97607f2"
+    },
+    {
+      "model": "floor_pin",
+      "return_code": 0,
+      "raw_warning_message": "",
+      "enable_support": "0",
+      "support_used": false,
+      "support_extrusion_moves": 0,
+      "bridge_sections": 0,
+      "bridge_positive_e_xy_moves": 0,
+      "stl_sha256": "883ea8907b2a92f69364ea5fbc49f4212588f2b2cb786950e8017cae4123e7f1",
+      "sliced_3mf_sha256": "b4799e3ed82b2e577095022556bddbb5bcbba1a7bf0fd0d21b995dc378565f80"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Thùng rác 4 góc — mẫu CAD thử
 
-**Bản thử gọn hiện tại:** mở [`thung-rac-4-goc-v6.scad`](thung-rac-4-goc-v6.scad); xem [`README-v6.md`](README-v6.md). V6 dùng khóa cầu chìm dưới đáy, tăng dày cục bộ và gân/bo đáy–thành, tổng 16 chi tiết in không vít/ê-cu/keo; STL/ảnh/audit ở `exports/v6/`. Ngàm đàn hồi mới cần thử coupon, chưa xác nhận lực bấm hoặc chịu tải. Script Fusion hiện vẫn là V4. V5/V4 được giữ để đối chiếu. Tài liệu FDM lưu theo [chỉ mục tham khảo](docs/REFERENCES.md). V3 có lỗi đường đưa chốt ngang bị gân chắn; giữ lại cùng bằng chứng tái hiện, không dùng V3 để in đủ thùng. Các phần dưới mô tả V2/V1 dùng vít, giữ để tham khảo.
+**B?n th? hi?n t?i:** m? [`thung-rac-4-goc-v7.scad`](thung-rac-4-goc-v7.scad); xem [`README-v7.md`](README-v7.md). V7 d?ng ray th?p v? n?p tr??t n?i hai m?p ??y, ch?t r?i ch?ng tu?t; t?ng 20 chi ti?t, kh?ng v?t/?-cu/keo. Coupon, n?p v? ch?t ?? slice offline v?i support t?t, kh?ng c? c?nh b?o; ch?a in ho?c th? t?i. STL/?nh/audit ? `exports/v7/`. [V6](README-v6.md) v? c?c b?n tr??c ???c gi? ?? ??i chi?u. Fusion hi?n v?n V4. T?i li?u FDM theo [ch? m?c tham kh?o](docs/REFERENCES.md). C?c ph?n d??i m? t? V2/V1 d?ng v?t.
 
 ## Bản V2 gia cường
 
