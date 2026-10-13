@@ -1,6 +1,6 @@
 # Thùng rác 4 góc — mẫu CAD thử
 
-**Bản hiện tại theo yêu cầu không vít:** mở `thung-rac-4-goc-v4.scad`; xem `README-v4.md`. STL/ảnh ở `exports/v4/`. V3 có lỗi đường đưa chốt ngang bị gân chắn; giữ lại cùng bằng chứng tái hiện, không dùng V3 để in đủ thùng. Các phần dưới mô tả V2/V1 dùng vít, giữ để tham khảo.
+**Bản gia cường hiện tại:** mở [`thung-rac-4-goc-v5.scad`](thung-rac-4-goc-v5.scad); xem [`README-v5.md`](README-v5.md). V5 thêm khóa đáy rời và gân/bo đáy–thành, tổng 20 chi tiết in không vít/ê-cu/keo; STL/ảnh/audit ở `exports/v5/`. Script Fusion hiện vẫn là V4. V4 giữ tại `README-v4.md` và `exports/v4/`. V3 có lỗi đường đưa chốt ngang bị gân chắn; giữ lại cùng bằng chứng tái hiện, không dùng V3 để in đủ thùng. Các phần dưới mô tả V2/V1 dùng vít, giữ để tham khảo.
 
 ## Bản V2 gia cường
 

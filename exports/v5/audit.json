@@ -1,0 +1,639 @@
+{
+  "source": "thung-rac-4-goc-v5.scad",
+  "physical_load_test": false,
+  "floor_key": {
+    "size_mm": [
+      12.0,
+      44.0,
+      32.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 8120.6021202468155
+  },
+  "corner": {
+    "size_mm": [
+      204.0,
+      195.79999999701977,
+      240.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 696164.887212459
+  },
+  "key": {
+    "size_mm": [
+      236.0,
+      12.0,
+      32.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 40316.22829559671
+  },
+  "pin": {
+    "size_mm": [
+      8.0,
+      17.0,
+      4.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 339.8640500440215
+  },
+  "floor_coupon": {
+    "size_mm": [
+      50.0,
+      51.0,
+      20.0
+    ],
+    "components": 2,
+    "watertight": true,
+    "volume_mm3": 36303.330870831065
+  },
+  "coupon": {
+    "size_mm": [
+      50.0,
+      18.0,
+      42.0
+    ],
+    "components": 2,
+    "watertight": true,
+    "volume_mm3": 27460.83788350728
+  },
+  "coupon_key": {
+    "size_mm": [
+      38.0,
+      12.0,
+      32.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 7148.6438107311415
+  },
+  "part_count": 20,
+  "assembled_bounds_mm": [
+    [
+      -199.0,
+      -199.0,
+      0.0
+    ],
+    [
+      199.0,
+      199.0,
+      244.0
+    ]
+  ],
+  "fixed_pairwise_intersections": [
+    {
+      "parts": [
+        0,
+        1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        2
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        3
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        6
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        0,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        2
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        3
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        6
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        1,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        3
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        6
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        9
+      ],
+      "overlap_mm3": 3.789561257387201e-14
+    },
+    {
+      "parts": [
+        2,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        2,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        4
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        6
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        3,
+        11
+      ],
+      "overlap_mm3": 1.2126596023639042e-12
+    },
+    {
+      "parts": [
+        4,
+        5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        4,
+        6
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        4,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        4,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        4,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        4,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        4,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        5,
+        6
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        5,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        5,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        5,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        5,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        5,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        6,
+        7
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        6,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        6,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        6,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        6,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        7,
+        8
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        7,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        7,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        7,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        8,
+        9
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        8,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        8,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        9,
+        10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        9,
+        11
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "parts": [
+        10,
+        11
+      ],
+      "overlap_mm3": 0.0
+    }
+  ],
+  "intentional_pin_interference": [
+    {
+      "pin": 0,
+      "part": 0,
+      "interference_mm3": 0.33204856918018777
+    },
+    {
+      "pin": 0,
+      "part": 1,
+      "interference_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 1,
+      "part": 1,
+      "interference_mm3": 0.33204856918018777
+    },
+    {
+      "pin": 1,
+      "part": 2,
+      "interference_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 2,
+      "part": 2,
+      "interference_mm3": 0.33204856918018777
+    },
+    {
+      "pin": 2,
+      "part": 3,
+      "interference_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 3,
+      "part": 0,
+      "interference_mm3": 0.33204858825774863
+    },
+    {
+      "pin": 3,
+      "part": 3,
+      "interference_mm3": 0.33204856918018777
+    },
+    {
+      "pin": 4,
+      "part": 0,
+      "interference_mm3": 0.664053454529494
+    },
+    {
+      "pin": 5,
+      "part": 1,
+      "interference_mm3": 0.664053454529494
+    },
+    {
+      "pin": 6,
+      "part": 2,
+      "interference_mm3": 0.664053454529494
+    },
+    {
+      "pin": 7,
+      "part": 3,
+      "interference_mm3": 0.664053454529494
+    }
+  ],
+  "pair_count": 190,
+  "sampled_corner_diagonal_path": true,
+  "sampled_wall_key_path": true,
+  "sampled_floor_key_path_mm": [
+    0.25,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    44
+  ],
+  "continuous_floor_key_free_approach_mm": [
+    0,
+    44.0
+  ],
+  "floor_key_captures_both_panels_xz_1mm": true,
+  "wall_keys_restrain_each_panel_xy_1mm": true,
+  "pins_block_key_withdrawal_1mm": true,
+  "continuous_pin_free_approach_mm": [
+    2,
+    60
+  ],
+  "floor_coupon_compatible": true,
+  "solid_volume_mm3": 2981125.782913555
+}
