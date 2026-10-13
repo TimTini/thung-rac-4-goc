@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-13",
+  "tool": "Bambu Studio 02.08.02.61",
+  "base_fixture": "Prusa MK3S 0.4 / Standard 0.20 / Generic PLA, 250x210 XY, original Z210",
+  "geometry_fixture_changes": {
+    "printable_height": [
+      "210",
+      "256"
+    ]
+  },
+  "physical_printer_capability_validated": false,
+  "physical_print_verified": false,
+  "models": [
+    {
+      "model": "floor_coupon",
+      "return_code": 0,
+      "raw_warning_message": "",
+      "support_used": false,
+      "enable_support": "0",
+      "printable_height": "210",
+      "bridge_sections": 4,
+      "bridge_positive_e_xy_moves": 409,
+      "support_extrusion_moves": 0,
+      "input_stl_sha256": "c83bf530f99222ef9d80418e8ca20c4923ec93fdcc71ac3f37c22b2e7466aacb",
+      "sliced_3mf_sha256": "b6ebbf57bbb70998c12c4f9cfdc22d8f901581ec109bab7b41cbd94cf160bf40"
+    },
+    {
+      "model": "corner_se",
+      "return_code": 0,
+      "raw_warning_message": "",
+      "support_used": false,
+      "enable_support": "0",
+      "printable_height": "256",
+      "bridge_sections": 18,
+      "bridge_positive_e_xy_moves": 4570,
+      "support_extrusion_moves": 0,
+      "input_stl_sha256": "a83bc20c64c4cbdf2428bc0559599e4d25e955e7241e8e1b8229973f9b5a1f65",
+      "sliced_3mf_sha256": "f68d67ba847c022990ca17e1a900ea231961476a5fcfaa14ab0e31514c9968f8"
+    }
+  ],
+  "original_z210_full_corner_attempt": {
+    "return_code": -50,
+    "reason": "240 mm model exceeds 210 mm fixture Z; no G-code"
+  }
+}

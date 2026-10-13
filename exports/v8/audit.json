@@ -1,0 +1,212 @@
+{
+  "source": "thung-rac-4-goc-v8.scad",
+  "physical_load_test": false,
+  "slicer_verified_by_this_audit": false,
+  "part_count": 12,
+  "pair_count": 66,
+  "corner_ne": {
+    "size_mm": [
+      195.79999999701977,
+      204.0,
+      240.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 670228.2864387311
+  },
+  "corner_nw": {
+    "size_mm": [
+      204.0,
+      204.0,
+      240.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 669832.3743951743
+  },
+  "corner_sw": {
+    "size_mm": [
+      204.0,
+      195.79999999701977,
+      240.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 670228.2864387315
+  },
+  "corner_se": {
+    "size_mm": [
+      195.79999999701977,
+      195.79999999701977,
+      240.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 670624.1984822856
+  },
+  "key": {
+    "size_mm": [
+      236.0,
+      12.0,
+      32.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 40316.22829559671
+  },
+  "pin": {
+    "size_mm": [
+      8.0,
+      17.0,
+      4.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 339.8640500440215
+  },
+  "floor_coupon_male_overhang_over_45deg_mm2": 0.0,
+  "floor_coupon_male": {
+    "size_mm": [
+      26.0,
+      24.0,
+      8.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 2130.800012588501
+  },
+  "floor_coupon_female_overhang_over_45deg_mm2": 0.0,
+  "floor_coupon_female": {
+    "size_mm": [
+      17.799999997019768,
+      24.0,
+      10.0
+    ],
+    "components": 1,
+    "watertight": true,
+    "volume_mm3": 2328.756037613868
+  },
+  "floor_coupon_overhang_over_45deg_mm2": 0.0,
+  "floor_coupon": {
+    "size_mm": [
+      48.0,
+      24.0,
+      10.0
+    ],
+    "components": 2,
+    "watertight": true,
+    "volume_mm3": 4459.5559436423
+  },
+  "wall_pin_press_interferences_mm3": [
+    [
+      8,
+      0,
+      0.33202480727362643
+    ],
+    [
+      8,
+      1,
+      0.3320230527144196
+    ],
+    [
+      9,
+      1,
+      0.33202480727362277
+    ],
+    [
+      9,
+      2,
+      0.33202305271443133
+    ],
+    [
+      10,
+      2,
+      0.33202480727362266
+    ],
+    [
+      10,
+      3,
+      0.33202305271440985
+    ],
+    [
+      11,
+      0,
+      0.3320230527140671
+    ],
+    [
+      11,
+      3,
+      0.33202480727367556
+    ]
+  ],
+  "floor_z_retention_each_seam_both_signs": true,
+  "continuous_body_assembly_sweeps": [
+    {
+      "moving_corner": 0,
+      "fixed_corners": [
+        1
+      ],
+      "translation_mm": [
+        12.0,
+        0,
+        0
+      ],
+      "collision_volumes_mm3": [
+        0.0
+      ]
+    },
+    {
+      "moving_corner": 3,
+      "fixed_corners": [
+        2
+      ],
+      "translation_mm": [
+        12.0,
+        0,
+        0
+      ],
+      "collision_volumes_mm3": [
+        0.0
+      ]
+    },
+    {
+      "moving_corner": 0,
+      "fixed_corners": [
+        2,
+        3
+      ],
+      "translation_mm": [
+        0,
+        12.0,
+        0
+      ],
+      "collision_volumes_mm3": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "moving_corner": 1,
+      "fixed_corners": [
+        2,
+        3
+      ],
+      "translation_mm": [
+        0,
+        12.0,
+        0
+      ],
+      "collision_volumes_mm3": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "wall_keys_prevent_floor_rail_withdrawal": true,
+  "continuous_wall_key_approach_verified": true,
+  "continuous_wall_pin_free_approach_mm": [
+    2,
+    60
+  ],
+  "coupon_fit_z_retention_and_continuous_approach": true
+}

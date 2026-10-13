@@ -1,0 +1,273 @@
+// V8: integral floor rails, four corner variants; assemble pairs X then Y.
+// Joint principle reference (independent geometry, not copied code):
+// https://catchit.pl/blog/modular-3d-printed-case-diy-project/
+// Still a prototype; reference does not validate this bin or its load rating.
+/* [View] */
+view = "assembled"; // [assembled,exploded,corner_ne,corner_nw,corner_sw,corner_se,key,pin,floor_coupon_male,floor_coupon_female,floor_coupon,floor_detail,floor_joint_section]
+explode_distance = 32;
+/* [Body] */
+body_size = 360;
+body_height = 240;
+wall = 3.2;
+floor_thickness = 4;
+corner_radius = 18;
+/* [Reinforcement] */
+rib_projection = 10;
+rib_thickness = 3;
+band_projection = 8;
+band_height = 24;
+floor_rib_height = 8;
+floor_rib_width = 4;
+floor_fillet = 3;
+gusset_run = 12;
+gusset_height = 16;
+/* [Floor joints] */
+floor_rail_depth = 8;
+floor_rail_clearance = 0.25;
+floor_socket_height = 10;
+/* [Printed joints] */
+seam_gap = 0.4;
+// Slot clearance measured normal to each key face, per side.
+key_clearance = 0.25;
+rail_width = 48;
+rail_projection = 16;
+key_stop = 8;
+floor_rib_start = 11;
+// Positive value is intentional wedge interference at the entry end.
+pin_interference = 0.1;
+
+$fn=48;
+eps=0.02;
+half=body_size/2;
+key_length=body_height-key_stop;
+pin_z=body_height-12;
+rail_y=half+rail_projection/2;
+coupon_height=42;
+assert(body_size>=320 && body_height>=120);
+assert(wall>=3 && floor_thickness>=4);
+assert(corner_radius>wall && corner_radius<half/2);
+assert(key_clearance>=0.15 && key_clearance<=0.5);
+assert(seam_gap>0 && seam_gap<1);
+assert(rail_width>=44 && rail_projection>=16);
+assert(floor_rib_start>=11 && floor_rib_start<half/3,
+       "Floor ribs must clear integral floor sockets");
+assert(pin_interference>=0 && pin_interference<=0.2);
+assert(floor_fillet>0 && floor_fillet<corner_radius-wall);
+assert(gusset_run>floor_fillet && gusset_height>floor_rib_height);
+assert(gusset_run<half/3-floor_rib_start && gusset_height<body_height-16);
+assert(floor_rail_depth>=6 && floor_rail_depth<=10);
+assert(floor_rail_clearance>=0.15 && floor_rail_clearance<=0.4);
+assert(floor_socket_height>=10 && floor_socket_height<=12);
+assert(floor_rib_start>=floor_rail_depth+3);
+assert(view=="assembled" || view=="exploded" || view=="key" || view=="pin"
+    || view=="corner_ne" || view=="corner_nw" || view=="corner_sw" || view=="corner_se"
+    || view=="floor_coupon_male" || view=="floor_coupon_female" || view=="floor_coupon"
+    || view=="floor_detail" || view=="floor_joint_section", "Unknown view");
+
+module rounded_square(size,radius) {
+    offset(r=radius) square(size-2*radius,center=true);
+}
+
+// Wide ends and narrow middle lock both halves against pulling apart.
+module bowtie() {
+    offset(r=0.6) offset(delta=-0.6)
+    polygon([[-16,-4],[-6,-2],[6,-2],[16,-4],
+             [16,4],[6,2],[-6,2],[-16,4]]);
+}
+
+module shell() {
+    difference() {
+        union() {
+            linear_extrude(body_height) rounded_square(body_size,corner_radius);
+            hull() {
+                translate([0,0,body_height-12]) linear_extrude(eps)
+                    rounded_square(body_size,corner_radius);
+                translate([0,0,body_height-8]) linear_extrude(8)
+                    rounded_square(body_size+8,corner_radius+4);
+            }
+            hull() {
+                translate([0,0,body_height/2-band_height/2]) linear_extrude(eps)
+                    rounded_square(body_size,corner_radius);
+                translate([0,0,body_height/2-band_height/2+band_projection])
+                    linear_extrude(band_height-band_projection)
+                        rounded_square(body_size+2*band_projection,
+                                       corner_radius+band_projection);
+            }
+        }
+        // Eight circular-profile segments form the internal floor cove.
+        for(i=[0:7]) hull() {
+            for(j=[i:i+1]) let(a=90*j/8,
+                inset=floor_fillet*(1-sin(a)),
+                z=floor_thickness+floor_fillet*(1-cos(a)))
+                translate([0,0,z]) linear_extrude(eps)
+                    rounded_square(body_size-2*wall-2*inset,
+                                   corner_radius-wall-inset);
+        }
+        translate([0,0,floor_thickness+floor_fillet]) linear_extrude(body_height+1)
+            rounded_square(body_size-2*wall,corner_radius-wall);
+    }
+}
+
+module face_ribs() {
+    for(x=[half*0.34,half*0.66]) translate([x,half,0])
+        linear_extrude(body_height) offset(r=1.5)
+            polygon([[-rib_thickness/2-2,-wall/2],
+                     [rib_thickness/2+2,-wall/2],
+                     [rib_thickness/2,rib_projection-1.5],
+                     [-rib_thickness/2,rib_projection-1.5]]);
+}
+
+module floor_ribs() {
+    for(p=[half/3,2*half/3]) {
+        translate([floor_rib_start,p-floor_rib_width/2,floor_thickness-eps])
+            cube([half-wall-floor_rib_start,floor_rib_width,floor_rib_height+eps]);
+        translate([p-floor_rib_width/2,floor_rib_start,floor_thickness-eps])
+            cube([floor_rib_width,half-wall-floor_rib_start,floor_rib_height+eps]);
+    }
+}
+
+module floor_gussets() {
+    for(p=[half/3,2*half/3])
+        translate([p-floor_rib_width/2,half-wall+eps,floor_thickness-eps])
+            rotate([90,0,90]) linear_extrude(floor_rib_width)
+                polygon([[-gusset_run,0],[0,0],[0,gusset_height+eps]]);
+}
+
+// Rail axis is normal to the seam. Diamond sides and socket roof are 45 degrees.
+// Profile base on bed; wider middle captures both upward and downward motion.
+module floor_profile() {
+    polygon([[-2,0],[2,0],[5,3],[0,8],[-5,3]]);
+}
+module floor_tongue() {
+    translate([-floor_rail_depth,0,0]) rotate([90,0,90])
+        linear_extrude(floor_rail_depth+3) floor_profile();
+}
+module floor_socket_blank() {
+    translate([seam_gap/2,-8,0])
+        cube([floor_rail_depth+3-seam_gap/2,16,floor_socket_height]);
+}
+module floor_socket_cut() {
+    translate([-eps,0,0]) rotate([90,0,90])
+        linear_extrude(floor_rail_depth+floor_rail_clearance+eps)
+            offset(delta=floor_rail_clearance) floor_profile();
+}
+module floor_edge_add(male) {
+    for(p=[half/3,2*half/3]) translate([0,p,0])
+        if(male) floor_tongue(); else floor_socket_blank();
+}
+module floor_edge_cut(male) {
+    if(!male) for(p=[half/3,2*half/3]) translate([0,p,0]) floor_socket_cut();
+}
+// NE,NW,SW,SE: north parts male along Y; west parts male along X globally.
+male_x=[false,true,true,false];
+male_y=[true,true,false,false];
+
+module rail() {
+    translate([seam_gap/2,half-wall/2,0])
+        linear_extrude(body_height)
+            polygon([[0,0],[rail_width/2-seam_gap/2,0],
+                     [rail_width/2-seam_gap/2-3,rail_projection+wall/2],
+                     [0,rail_projection+wall/2]]);
+}
+
+module slot() {
+    translate([0,rail_y,key_stop]) linear_extrude(body_height-key_stop+eps)
+        offset(delta=key_clearance) bowtie();
+}
+
+module pin_bore(z) {
+    translate([-2.3,half+2,z-2.25])
+        cube([4.6,rail_projection-2+eps,4.5]);
+}
+
+module corner(index=0, retaining_z=pin_z) {
+    difference() {
+        union() {
+            intersection() {
+                shell();
+                translate([seam_gap/2,seam_gap/2,-eps])
+                    cube([half+band_projection,half+band_projection,body_height+2*eps]);
+            }
+            face_ribs(); mirror([1,-1,0]) face_ribs();
+            rail(); mirror([1,-1,0]) rail();
+            floor_ribs();
+            floor_gussets(); mirror([1,-1,0]) floor_gussets();
+            floor_edge_add(male_x[index]);
+            mirror([1,-1,0]) floor_edge_add(male_y[index]);
+        }
+        slot(); mirror([1,-1,0]) slot();
+        pin_bore(retaining_z); mirror([1,-1,0]) pin_bore(retaining_z);
+        floor_edge_cut(male_x[index]);
+        mirror([1,-1,0]) floor_edge_cut(male_y[index]);
+    }
+}
+
+module key(length=key_length, bore_z=pin_z-key_stop) {
+    difference() {
+        union() {
+            linear_extrude(length) bowtie();
+            translate([-16,-6,length]) cube([32,12,4]);
+        }
+        translate([-2.3,2-rail_projection/2,bore_z-2.25])
+            cube([4.6,rail_projection-2+eps,4.5]);
+    }
+}
+
+module pin() {
+    // Short radial wedge points inward (-Y); outside head remains accessible.
+    linear_extrude(4) union() {
+        polygon([[-(4.6+pin_interference)/2,0],[-2,-14],
+                 [2,-14],[(4.6+pin_interference)/2,0]]);
+        translate([-4,-eps]) square([8,3+eps]);
+    }
+}
+
+module key_at_seam() {
+    translate([0,rail_y,key_stop]) key();
+}
+module pin_at_seam() {
+    translate([0,half+rail_projection,pin_z-2]) pin();
+}
+module print_key(length=key_length,bore_z=pin_z-key_stop) {
+    translate([0,6,16]) rotate([0,90,0]) key(length,bore_z);
+}
+
+colors=[[0.20,0.62,0.65],[0.93,0.63,0.25],[0.35,0.55,0.78],[0.75,0.43,0.53]];
+module coupon(male) {
+    intersection() {
+        difference() {
+            union() {
+                translate([seam_gap/2,-12,0]) cube([18-seam_gap/2,24,floor_thickness]);
+                if(male) floor_tongue(); else floor_socket_blank();
+            }
+            if(!male) floor_socket_cut();
+        }
+        translate([-floor_rail_depth-1,-12,-eps]) cube([floor_rail_depth+20,24,14]);
+    }
+}
+if(view=="assembled" || view=="exploded" || view=="floor_detail") {
+    for(i=[0:3]) rotate([0,0,90*i]) {
+        color(colors[i]) translate(view=="exploded" ? [explode_distance,explode_distance,0] : [0,0,0])
+            if(view=="floor_detail") intersection() {
+                corner(i); translate([-150,-150,-eps]) cube([300,300,16]);
+            } else corner(i);
+        if(view!="floor_detail") {
+            color([0.28,0.30,0.33]) translate(view=="exploded" ? [0,20,50] : [0,0,0]) key_at_seam();
+            color([0.95,0.75,0.20]) translate(view=="exploded" ? [0,50,50] : [0,0,0]) pin_at_seam();
+        }
+    }
+} else if(view=="corner_ne") corner(0);
+else if(view=="corner_nw") corner(1);
+else if(view=="corner_sw") corner(2);
+else if(view=="corner_se") corner(3);
+else if(view=="key") print_key();
+else if(view=="pin") translate([4,14,0]) pin();
+else if(view=="floor_coupon_male") translate([floor_rail_depth,12,0]) coupon(true);
+else if(view=="floor_coupon_female") translate([0,12,0]) coupon(false);
+else if(view=="floor_coupon") {
+    translate([floor_rail_depth,12,0]) coupon(true);
+    translate([floor_rail_depth+22,12,0]) coupon(false);
+} else if(view=="floor_joint_section") {
+    color(colors[0]) intersection() { coupon(false); translate([4,-12,-eps]) cube([.8,24,14]); }
+    color(colors[1]) intersection() { mirror([1,0,0]) coupon(true); translate([4,-12,-eps]) cube([.8,24,14]); }
+}
