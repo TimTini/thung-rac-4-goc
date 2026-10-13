@@ -1,6 +1,6 @@
 # Thùng rác 4 góc — mẫu CAD thử
 
-**Bản gia cường hiện tại:** mở [`thung-rac-4-goc-v5.scad`](thung-rac-4-goc-v5.scad); xem [`README-v5.md`](README-v5.md). V5 thêm khóa đáy rời và gân/bo đáy–thành, tổng 20 chi tiết in không vít/ê-cu/keo; STL/ảnh/audit ở `exports/v5/`. Script Fusion hiện vẫn là V4. V4 giữ tại `README-v4.md` và `exports/v4/`. V3 có lỗi đường đưa chốt ngang bị gân chắn; giữ lại cùng bằng chứng tái hiện, không dùng V3 để in đủ thùng. Các phần dưới mô tả V2/V1 dùng vít, giữ để tham khảo.
+**Bản thử gọn hiện tại:** mở [`thung-rac-4-goc-v6.scad`](thung-rac-4-goc-v6.scad); xem [`README-v6.md`](README-v6.md). V6 dùng khóa cầu chìm dưới đáy, tăng dày cục bộ và gân/bo đáy–thành, tổng 16 chi tiết in không vít/ê-cu/keo; STL/ảnh/audit ở `exports/v6/`. Ngàm đàn hồi mới cần thử coupon, chưa xác nhận lực bấm hoặc chịu tải. Script Fusion hiện vẫn là V4. V5/V4 được giữ để đối chiếu. Tài liệu FDM lưu theo [chỉ mục tham khảo](docs/REFERENCES.md). V3 có lỗi đường đưa chốt ngang bị gân chắn; giữ lại cùng bằng chứng tái hiện, không dùng V3 để in đủ thùng. Các phần dưới mô tả V2/V1 dùng vít, giữ để tham khảo.
 
 ## Bản V2 gia cường
 
