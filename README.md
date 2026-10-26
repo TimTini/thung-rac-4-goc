@@ -1,5 +1,7 @@
 # Thùng rác 4 góc — mẫu CAD thử
 
+Cấu trúc thư mục và vai trò dữ liệu: [docs/STRUCTURE.md](docs/STRUCTURE.md).
+
 **B?n th? hi?n t?i:** m? [`thung-rac-4-goc-v8.scad`](thung-rac-4-goc-v8.scad); xem [`README-v8.md`](README-v8.md). V8 d?ng ray v? r?nh in li?n tr?n ??y, kh?ng c? n?p/ch?t ??y r?i; b?n g?c kh?c nhau, t?ng 12 chi ti?t. Gh?p hai c?p theo X, gh?p hai n?a theo Y, r?i l?p kh?a th?nh. Coupon v? g?c SE ?? slice offline v?i support t?t, kh?ng c?nh b?o; g?c 240 mm d?ng fixture ch?n ?o?n n?ng ri?ng gi?i h?n Z l?n 256 mm. Ch?a in ho?c th? t?i. STL/?nh/audit ? `exports/v8/`. [V7](README-v7.md), [V6](README-v6.md) v? c?c b?n tr??c ???c gi? ?? ??i chi?u. Fusion hi?n v?n V4. T?i li?u FDM theo [ch? m?c tham kh?o](docs/REFERENCES.md). C?c ph?n d??i m? t? V2/V1 d?ng v?t.
 
 Bản chính của hướng dẫn chung nằm tại `H:/OpenSCAD/docs/guides`, dùng cho mọi dự án STL, OpenSCAD và Fusion. [Bản lưu công khai 1.0.2](https://github.com/TimTini/snaplock-storage-box/tree/e9311687b4653a4055597ba93b595d739734020c/docs/guides) giữ nội dung theo commit trước khi chuyển thư mục.
