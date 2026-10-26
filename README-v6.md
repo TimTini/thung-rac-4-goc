@@ -93,9 +93,7 @@ python -B build-v6.py
 python -B verify-v6-variants.py
 ```
 
-Trên workspace hiện tại dùng OpenSCAD nightly tại
-`H:\OpenSCAD\portable\OpenSCAD-2026.09.29-x86-64\openscad.com` và Python tại
-`H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe` (dependency theo requirements.txt).
+Môi trường đã kiểm tra dùng OpenSCAD nightly 2026.09.29 và Python với dependency trong `requirements.txt`. Đặt biến `OPENSCAD` theo executable trên máy hoặc cung cấp OpenSCAD trong PATH.
 
 Audit kiểm tra mesh kín/số component, mặt đặt bàn, XY 250, 120 cặp của 16 part,
 giao thể tích ép chốt thành báo riêng. Kiểm tra từng đầu T chặn hai miếng theo
@@ -142,5 +140,4 @@ Lệnh CLI đối chiếu [tài liệu chính thức Bambu Studio](https://githu
 
 ## Tài liệu tham khảo
 
-Xem [chỉ mục tài liệu FDM](docs/REFERENCES.md). PDF hãng và ghi chú đã lưu offline
-trong thư viện chung `H:\OpenSCAD\docs\references\`; không đăng lại PDF hãng vào repo.
+Xem [chỉ mục tài liệu FDM](docs/REFERENCES.md). Thư viện offline của người dùng giữ PDF hãng và ghi chú; repo dẫn tới nguồn chính thức.

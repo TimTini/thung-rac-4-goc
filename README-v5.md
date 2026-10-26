@@ -91,12 +91,12 @@ python -B build-v5.py
 python -B verify-v5-variants.py
 ```
 
-Trên workspace hiện tại dùng:
+Chạy trong môi trường Python đã cài `requirements.txt`, với OpenSCAD trong PATH:
 
 ```powershell
-$env:OPENSCAD = 'H:\OpenSCAD\portable\OpenSCAD-2026.09.29-x86-64\openscad.com'
-& 'H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe' -B build-v5.py
-& 'H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe' -B verify-v5-variants.py
+$env:OPENSCAD = (Get-Command openscad.com).Source
+python -B build-v5.py
+python -B verify-v5-variants.py
 ```
 
 `build-v5.py` xuất STL và kiểm tra kín mesh/số component/đặt trên bàn/XY250;

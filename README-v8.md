@@ -44,9 +44,9 @@ Coupon đã slice offline với Bambu Studio 02.08.02.61, fixture Prusa MK3S 0,4
 `floor_rail_depth=8`, `floor_rail_clearance=0.25`, `floor_socket_height=10`, `floor_rib_start=11`. Chiều sâu cho phép 6–10 mm; tăng chiều sâu phải tăng khoảng lùi gân tới ít nhất `depth+3`. Mái rãnh tối thiểu cao 10 mm từ bàn để còn khoảng 1,6 mm vật liệu trên đỉnh rãnh ở khe lớn nhất. Hình tiết diện ray giữ cố định; thay hình cần đồng bộ coupon và audit.
 
 ```powershell
-$env:OPENSCAD = 'H:\OpenSCAD\portable\OpenSCAD-2026.09.29-x86-64\openscad.com'
-& 'H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe' build-v8.py
-& 'H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe' verify-v8-variants.py
+$env:OPENSCAD = (Get-Command openscad.com).Source
+python build-v8.py
+python verify-v8-variants.py
 ```
 
 Python cần dependency trong `requirements.txt`; runtime hoặc OpenSCAD có thể đổi đường dẫn. Không dùng Python `-O`.

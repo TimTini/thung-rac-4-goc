@@ -40,9 +40,9 @@ Xem `floor_joint_section.png` và `floor_joint_exploded.png` để kiểm tra ch
 `floor_rail_length=80`, `floor_rail_start=46`, `floor_rail_clearance=0.25`, `floor_pin_interference=0.05`, `floor_rib_start=11`. Không kéo dài ray chỉ bằng cách sửa chiều dài: vị trí bắt đầu phải đủ chỗ cho vai hai nắp đối diện đi qua khi lắp. Source có assert giới hạn đường lắp, khoảng cách gân và vị trí ray.
 
 ```powershell
-$env:OPENSCAD = 'H:\OpenSCAD\portable\OpenSCAD-2026.09.29-x86-64\openscad.com'
-& 'H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe' build-v7.py
-& 'H:\OpenSCAD\work\toothbrush-tools\Scripts\python.exe' verify-v7-variants.py
+$env:OPENSCAD = (Get-Command openscad.com).Source
+python build-v7.py
+python verify-v7-variants.py
 ```
 
 Có thể dùng Python cài dependency trong `requirements.txt` và OpenSCAD Manifold ở đường dẫn khác. Không chạy audit với Python `-O`.

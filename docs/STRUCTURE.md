@@ -10,7 +10,7 @@ Source: `thung-rac-4-goc.scad; thung-rac-4-goc-v2.scad đến -v8.scad`.
 - [docs/](../docs/): tài liệu project và ảnh minh họa.
 - [fusion/](../fusion/): script/manifest, hướng dẫn và test Fusion.
 - [tests/](../tests/): kiểm thử project.
-- [work/](../work/): checkpoint và khảo sát local.
+- `work/` (local): checkpoint và khảo sát local.
 
 Các SCAD, build-vN.py, verify-vN-variants.py và README-vN.md giữ tại gốc; exports/vN giữ đầu ra theo phiên bản. README chính chỉ rõ phiên bản đang dùng.
 

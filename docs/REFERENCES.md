@@ -3,8 +3,8 @@
 ## Stratasys FDM Design Guide (2025)
 
 - [PDF chính thức](https://www.stratasys.com/siteassets/sdm/content---website-storage/design-guides/dg_sdm_fdm_0725a.pdf).
-- Bản PDF offline trên máy: `H:\OpenSCAD\docs\references\stratasys-fdm-design-guide-2025.pdf`.
-- Ghi chú điều hướng offline: `H:\OpenSCAD\docs\references\stratasys-fdm-design-guide-2025.md`.
+- Tên bản PDF trong thư viện offline: `stratasys-fdm-design-guide-2025.pdf`.
+- Tên ghi chú điều hướng offline: `stratasys-fdm-design-guide-2025.md`.
 - Đã tải và xác minh ngày 2026-10-13: 10 trang, 893.057 byte.
 - SHA-256: `4c92aa8d7d3f51383bd8d8d5ac6aa5463b5aa7eb6ed59663073eefa85b96a495`.
 
